@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "name": "foodfacts-app-new",
+=======
   "name": "foodfacts-app",
+>>>>>>> 0cc68c4ef3e2bee762aa7d8012b5f3d41a6c0969
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +14,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "axios": "^1.14.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.14.0"
+=======
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
+>>>>>>> 0cc68c4ef3e2bee762aa7d8012b5f3d41a6c0969
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
