@@ -1,5 +1,5 @@
 import SearchBar from "../components/SearchBar";
-import FoodCard from "../components/FoodCard";
+import FoodList from "../components/FoodList";
 import useFoodSearch from "../hooks/useFoodSearch";
 
 function HomePage() {
@@ -7,17 +7,18 @@ function HomePage() {
 
   return (
     <div>
-  <SearchBar onSearch={searchFood} />
+      <SearchBar onSearch={searchFood} />
 
-  {loading && <p>Loading...</p>}
-  {error && <p>{error}</p>}
+      {loading && <p>Loading...</p>}
 
-  <div style={{ display: "flex", flexWrap: "wrap" }}>
-    {results.map(item => (
-      <FoodCard key={item.code} item={item} />
-    ))}
-  </div>
-</div>
+      {error && <p>{error}</p>}
+
+      {!loading && results.length === 0 && <p>No results yet</p>}
+
+      {!loading && results.length > 0 && (
+        <FoodList products={results} />
+      )}
+    </div>
   );
 }
 
