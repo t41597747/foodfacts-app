@@ -1,3 +1,4 @@
+ HEAD
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -109,3 +110,61 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+body {
+  background-color: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center container */
+.app {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Search bar */
+form {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* GRID layout */
+.food-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background-color: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+ 0cc68c4ef3e2bee762aa7d8012b5f3d41a6c0969

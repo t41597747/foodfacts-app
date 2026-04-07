@@ -21,10 +21,9 @@ function SearchBar({ onSearch }) {
       <input
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Search food..."
       />
       <button type="submit">Search</button>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p>{error}</p>}
     </form>
   );
 }

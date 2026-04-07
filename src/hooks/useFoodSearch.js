@@ -28,10 +28,14 @@ const useFoodSearch = () => {
         (p) => p.product_name
       );
 
-      setResults(filtered);
+      setResults(filtered || []);
 
     } catch (err) {
-      console.log(err); // 👈 see error in console
+  console.log(err);
+
+  // ✅ Better handling
+  setError("Failed to fetch data. Try again.");
+}// 👈 see error in console
 
       if (err.response) setError("Server error");
       else if (err.request) setError("No internet connection");
@@ -42,6 +46,6 @@ const useFoodSearch = () => {
   };
 
   return { results, loading, error, searchFood };
-};
+
 
 export default useFoodSearch;
